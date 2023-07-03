@@ -1,12 +1,12 @@
 /*
-ÀÌ µ¥ÀÌÅÍº£ÀÌ½º¿¡´Â ÇÜ¹ö°Å °¡°Ô ÁÖ¹® ¾îÇÃ¸®ÄÉÀÌ¼ÇÀ» À§ÇÑ Å×ÀÌºíµéÀÌ ÀÖ½À´Ï´Ù.
-È¸¿ø Á¤º¸¸¦ ÀúÀåÇÏ´Â Members Å×ÀÌºíÀº È¸¿ø ID¸¦ ±âº» Å°·Î »ç¿ëÇÏ¸ç, ÁÖ¹®ÇÑ ÇÜ¹ö°Å¿Í »çÀÌµå ¸Þ´º¸¦ Àå¹Ù±¸´Ï¿¡ ´ã´Â Cart Å×ÀÌºí°ú °ü°è¸¦ ¸Î½À´Ï´Ù.
-Cart Å×ÀÌºíÀÇ ID¿Í burgerName, sideName ÄÃ·³Àº °¢°¢ Members Å×ÀÌºíÀÇ ID ÄÃ·³°ú Hamburger, SideMenu Å×ÀÌºíÀÇ ÇØ´ç ÄÃ·³°ú °ü°è¸¦ ¸Î½À´Ï´Ù.
-ÁÖ¹®ÀÌ ¿Ï·áµÇ¸é Cart Å×ÀÌºíÀÇ ³»¿ëÀº buyHistory Å×ÀÌºí·Î ÀÌµ¿ÇÏ°Ô µÇ´Âµ¥, buyHistory Å×ÀÌºíÀº ÁÖ¹®ÀÚ ID¿Í ÁÖ¹®ÇÑ ÇÜ¹ö°Å¿Í »çÀÌµå ¸Þ´º, °¡°Ý, ±¸¸Å ÀÏÀÚ µîÀÇ Á¤º¸¸¦ ÀúÀåÇÕ´Ï´Ù.
-ÀÌ¶§ buyHistory Å×ÀÌºíÀÇ ID ÄÃ·³Àº Cart Å×ÀÌºíÀÇ ID ÄÃ·³À» ÂüÁ¶ÇÕ´Ï´Ù.
-¶ÇÇÑ SalesRecord Å×ÀÌºíÀº ¸ÅÃâ ³»¿ªÀ» ÀúÀåÇÏ´Âµ¥, È¸¿ø ID, È¸¿ø ÀÌ¸§, ÀüÈ­¹øÈ£, ÁÖ¹® ¼ö·®, ÃÑ ±Ý¾×, ±¸¸Å ÀÏÀÚ µîÀÇ Á¤º¸¸¦ Æ÷ÇÔÇÕ´Ï´Ù.
-SalesRecord Å×ÀÌºíÀÇ ID ÄÃ·³Àº buyHistory Å×ÀÌºíÀÇ ID ÄÃ·³À» ÂüÁ¶ÇÕ´Ï´Ù.
-ÀÌ·¸°Ô Å×ÀÌºíµé °£ÀÇ °ü°è¿Í ±¸Á¶¸¦ ¼³Á¤ÇÏ¿© ÇÜ¹ö°Å °¡°Ô ÁÖ¹® ¾îÇÃ¸®ÄÉÀÌ¼Ç¿¡¼­ È¸¿ø °ü¸®, ÁÖ¹® Á¤º¸, ±¸¸Å ³»¿ª, ¸ÅÃâ ³»¿ªÀ» È¿°úÀûÀ¸·Î °ü¸®ÇÒ ¼ö ÀÖ½À´Ï´Ù.
+ì´ ë°ì´í„°ë² ì´ìŠ¤ì—ëŠ” í–„ë²„ê±° ê°€ê²Œ ì£¼ë¬¸ ì–´í”Œë¦¬ì¼€ì´ì…˜ì„ ìœ„í•œ í…Œì´ë¸”ë“¤ì´ ìžˆìŠµë‹ˆë‹¤.
+íšŒì› ì •ë³´ë¥¼ ì €ìž¥í•˜ëŠ” Members í…Œì´ë¸”ì€ íšŒì› IDë¥¼ ê¸°ë³¸ í‚¤ë¡œ ì‚¬ìš©í•˜ë©°, ì£¼ë¬¸í•œ í–„ë²„ê±°ì™€ ì‚¬ì´ë“œ ë©”ë‰´ë¥¼ ìž¥ë°”êµ¬ë‹ˆì— ë‹´ëŠ” Cart í…Œì´ë¸”ê³¼ ê´€ê³„ë¥¼ ë§ºìŠµë‹ˆë‹¤.
+Cart í…Œì´ë¸”ì˜ IDì™€ burgerName, sideName ì»¬ëŸ¼ì€ ê°ê° Members í…Œì´ë¸”ì˜ ID ì»¬ëŸ¼ê³¼ Hamburger, SideMenu í…Œì´ë¸”ì˜ í•´ë‹¹ ì»¬ëŸ¼ê³¼ ê´€ê³„ë¥¼ ë§ºìŠµë‹ˆë‹¤.
+ì£¼ë¬¸ì´ ì™„ë£Œë˜ë©´ Cart í…Œì´ë¸”ì˜ ë‚´ìš©ì€ buyHistory í…Œì´ë¸”ë¡œ ì´ë™í•˜ê²Œ ë˜ëŠ”ë°, buyHistory í…Œì´ë¸”ì€ ì£¼ë¬¸ìž IDì™€ ì£¼ë¬¸í•œ í–„ë²„ê±°ì™€ ì‚¬ì´ë“œ ë©”ë‰´, ê°€ê²©, êµ¬ë§¤ ì¼ìž ë“±ì˜ ì •ë³´ë¥¼ ì €ìž¥í•©ë‹ˆë‹¤.
+ì´ë•Œ buyHistory í…Œì´ë¸”ì˜ ID ì»¬ëŸ¼ì€ Cart í…Œì´ë¸”ì˜ ID ì»¬ëŸ¼ì„ ì°¸ì¡°í•©ë‹ˆë‹¤.
+ë˜í•œ SalesRecord í…Œì´ë¸”ì€ ë§¤ì¶œ ë‚´ì—­ì„ ì €ìž¥í•˜ëŠ”ë°, íšŒì› ID, íšŒì› ì´ë¦„, ì „í™”ë²ˆí˜¸, ì£¼ë¬¸ ìˆ˜ëŸ‰, ì´ ê¸ˆì•¡, êµ¬ë§¤ ì¼ìž ë“±ì˜ ì •ë³´ë¥¼ í¬í•¨í•©ë‹ˆë‹¤.
+SalesRecord í…Œì´ë¸”ì˜ ID ì»¬ëŸ¼ì€ buyHistory í…Œì´ë¸”ì˜ ID ì»¬ëŸ¼ì„ ì°¸ì¡°í•©ë‹ˆë‹¤.
+ì´ë ‡ê²Œ í…Œì´ë¸”ë“¤ ê°„ì˜ ê´€ê³„ì™€ êµ¬ì¡°ë¥¼ ì„¤ì •í•˜ì—¬ í–„ë²„ê±° ê°€ê²Œ ì£¼ë¬¸ ì–´í”Œë¦¬ì¼€ì´ì…˜ì—ì„œ íšŒì› ê´€ë¦¬, ì£¼ë¬¸ ì •ë³´, êµ¬ë§¤ ë‚´ì—­, ë§¤ì¶œ ë‚´ì—­ì„ íš¨ê³¼ì ìœ¼ë¡œ ê´€ë¦¬í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
 */
 
 
@@ -24,90 +24,90 @@ DROP TABLE SideMenu CASCADE CONSTRAINTS;
 
 /* Create Tables */
 
--- ±¸¸Å³»¿ª
+-- êµ¬ë§¤ë‚´ì—­
 CREATE TABLE BuyHistory
 (
-	-- ±¸¸Å³»¿ª ¼ø¼­
+	-- êµ¬ë§¤ë‚´ì—­ ìˆœì„œ
 	historyNo number NOT NULL UNIQUE,
-	-- ¾ÆÀÌµð
+	-- ì•„ì´ë””
 	ID varchar2(30) PRIMARY KEY,
-	-- ÇÜ¹ö°Å ÀÌ¸§
+	-- í–„ë²„ê±° ì´ë¦„
 	burgerName varchar2(50),
-	-- »çÀÌµå ¸Þ´º ÀÌ¸§
+	-- ì‚¬ì´ë“œ ë©”ë‰´ ì´ë¦„
 	sideName varchar2(50),
-	-- ÇØ´ç ÁÖ¹®ÀÇ ±Ý¾×
+	-- í•´ë‹¹ ì£¼ë¬¸ì˜ ê¸ˆì•¡
 	Price number NOT NULL,
-	-- ±¸¸ÅÀÏÀÚ
+	-- êµ¬ë§¤ì¼ìž
 	buyDate date NOT NULL
 );
 
 
--- Àå¹Ù±¸´Ï
+-- ìž¥ë°”êµ¬ë‹ˆ
 CREATE TABLE Cart
 (
-	-- Àå¹Ù±¸´Ï ¼ø¼­
+	-- ìž¥ë°”êµ¬ë‹ˆ ìˆœì„œ
 	cartNo number NOT NULL UNIQUE,
-	-- ¾ÆÀÌµð
+	-- ì•„ì´ë””
 	ID varchar2(30) PRIMARY KEY,
-	-- ÇÜ¹ö°Å ÀÌ¸§
+	-- í–„ë²„ê±° ì´ë¦„
 	burgerName varchar2(50),
-	-- »çÀÌµå ¸Þ´º ÀÌ¸§
+	-- ì‚¬ì´ë“œ ë©”ë‰´ ì´ë¦„
 	sideName varchar2(50),
-	-- ÇØ´ç ÁÖ¹®ÀÇ ±Ý¾×
+	-- í•´ë‹¹ ì£¼ë¬¸ì˜ ê¸ˆì•¡
 	Price number NOT NULL
 );
 
 
--- ÇÜ¹ö°Å
+-- í–„ë²„ê±°
 CREATE TABLE Hamburger
 (
-	-- ÇÜ¹ö°Å ÀÌ¸§
+	-- í–„ë²„ê±° ì´ë¦„
 	burgerName varchar2(50) PRIMARY KEY,
-	-- ÇÜ¹ö°Å °¡°Ý
+	-- í–„ë²„ê±° ê°€ê²©
 	Price number NOT NULL
 );
 
 
--- È¸¿ø Á¤º¸
+-- íšŒì› ì •ë³´
 CREATE TABLE Members
 (
-	-- ¾ÆÀÌµð
+	-- ì•„ì´ë””
 	ID varchar2(30) PRIMARY KEY,
-	-- ºñ¹Ð¹øÈ£
+	-- ë¹„ë°€ë²ˆí˜¸
 	PW varchar2(30) NOT NULL,
-	-- È¸¿ø ÀÌ¸§
+	-- íšŒì› ì´ë¦„
 	memName varchar2(20) NOT NULL,
-	-- È¸¿ø ÀüÈ­¹øÈ£
+	-- íšŒì› ì „í™”ë²ˆí˜¸
 	memTel varchar2(13) NOT NULL UNIQUE,
-	-- È¸¿ø ÁÖ¼Ò
+	-- íšŒì› ì£¼ì†Œ
 	memAddress varchar2(100) NOT NULL
 );
 
 
--- ¸ÅÃâ³»¿ª(°ü¸®ÀÚ)
+-- ë§¤ì¶œë‚´ì—­(ê´€ë¦¬ìž)
 CREATE TABLE SalesRecord
 (
-	-- ¾ÆÀÌµð
+	-- ì•„ì´ë””
 	ID varchar2(30) PRIMARY KEY,
-	-- È¸¿ø ÀÌ¸§
+	-- íšŒì› ì´ë¦„
 	memName varchar2(20) NOT NULL,
-	-- ÀüÈ­¹øÈ£
+	-- ì „í™”ë²ˆí˜¸
 	memTel varchar2(13) NOT NULL UNIQUE,
-	-- ÁÖ¹®¼ö·®
+	-- ì£¼ë¬¸ìˆ˜ëŸ‰
 	quantity number NOT NULL,
-	-- ¸ÅÃâÃÑ¾×
+	-- ë§¤ì¶œì´ì•¡
 	totalPrice number NOT NULL,
-	-- ±¸¸ÅÀÏÀÚ
+	-- êµ¬ë§¤ì¼ìž
 	buyDate date NOT NULL
 );
 
 
--- »çÀÌµå ¸Þ´º
+-- ì‚¬ì´ë“œ ë©”ë‰´
 CREATE TABLE SideMenu
 (
-	-- »çÀÌµå ¸Þ´º ÀÌ¸§
+	-- ì‚¬ì´ë“œ ë©”ë‰´ ì´ë¦„
 	sideName varchar2(50) PRIMARY KEY,
-	-- »çÀÌµå ¸Þ´º °¡°Ý
+	-- ì‚¬ì´ë“œ ë©”ë‰´ ê°€ê²©
 	Price number NOT NULL
 );
 
